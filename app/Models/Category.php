@@ -22,11 +22,4 @@ class Category extends Model
         'description',
     ];
 
-    /**
-     * Get the products for the category.
-     */
-    public function products(): HasMany
-    {
-        return $this->hasMany(Product::class);
-    }
 }
