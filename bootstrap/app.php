@@ -26,9 +26,7 @@ return Application::configure(basePath: dirname(__DIR__))
         ) {
             if ($request->is('api/*')) {
                 return response()->json([
-                    'success' => false,
-                    'message' => 'Anda belum login atau token tidak valid',
-                    'data' => null,
+                    'message' => 'Unauthenticated'
                 ], 401);
             }
         });
